@@ -48,7 +48,12 @@ const menus = ref([
       "
     >
       <NuxtLink to="/" class="font-bold text-skin-muted text-lg">
-        {{ 'Starter Kit' }}
+        <img
+          loading="lazy"
+          src="/logo.svg"
+          alt="Logo"
+          class="max-w-full h-10"
+        >
       </NuxtLink>
       <button
         class="appearance-none px-2 py-2 rounded sm:hidden"
