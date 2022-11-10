@@ -2,20 +2,23 @@
 definePageMeta({
   fullWidth: true,
 })
+
+const events = reactive({
+  capacity: 4,
+  attending: ['Nguyễn Đức Tuấn'],
+  spaceLeft: computed(() => {
+    return events.capacity - events.attending.length
+  }),
+})
+
+const increaseCapacity = () => {
+  events.capacity += 1
+}
 </script>
 
 <template>
   <div>
-    <!-- <HeroSection v-bind="data.hero" />
-
-    <HomeAbout v-bind="data.about" />
-
-    <SectionHeader v-bind="data.feature" id="feature" />
-
-    <HomeFeatures :features="data.features" />
-
-    <HomeQuote v-bind="data.quote" />
-
-    <ContactForm v-bind="data.contact" /> -->
+    <Banner />
+    <!-- {{ events.spaceLeft }} -->
   </div>
 </template>

@@ -3,6 +3,7 @@
 <template>
   <div class="flex flex-col sm:flex-row sm:h-screen">
     <div class="w-full sm:w-6/12 lg:5/12 p-6 bg-white">
+      <NuxtLoadingIndicator />
       <NuxtPage />
     </div>
     <div

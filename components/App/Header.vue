@@ -1,5 +1,7 @@
 <script setup>
+import { useAuthStore } from '~~/stores/auth'
 const isOpen = ref(false)
+const auth = useAuthStore()
 
 const menus = ref([
   {
@@ -12,11 +14,11 @@ const menus = ref([
     to: '/blog',
     name: 'Blog',
   },
-  {
-    text: 'menu_login',
-    to: '/auth/login',
-    name: 'Login',
-  },
+  // {
+  //   text: 'menu_login',
+  //   to: '/auth/login',
+  //   name: 'Login',
+  // },
 ])
 </script>
 
@@ -95,6 +97,46 @@ const menus = ref([
             exact-active-class="bg-skin-fill-active text-skin-active"
           >
             {{ menu.name }}
+          </NuxtLink>
+          <NuxtLink
+            v-if="!auth.loggedIn"
+            to="/auth/login"
+            class="
+              px-4
+              py-2
+              rounded-full
+              w-full
+              sm:w-auto
+              text-skin-base
+              hover:text-skin-hover
+              hover:bg-skin-fill-hover
+              transition
+              duration-200
+              font-medium
+            "
+            exact-active-class="bg-skin-fill-active text-skin-active"
+          >
+            Login
+          </NuxtLink>
+          <NuxtLink
+            v-else
+            to="/me"
+            class="
+              px-4
+              py-2
+              rounded-full
+              w-full
+              sm:w-auto
+              text-skin-base
+              hover:text-skin-hover
+              hover:bg-skin-fill-hover
+              transition
+              duration-200
+              font-medium
+            "
+            exact-active-class="bg-skin-fill-active text-skin-active"
+          >
+            {{ auth.user.name }}
           </NuxtLink>
 
           <div>

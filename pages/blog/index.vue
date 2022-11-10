@@ -1,3 +1,9 @@
+<script setup>
+definePageMeta({
+  fullWidth: false,
+})
+</script>
+
 <template>
-    <div></div>
+  <div>Blog index</div>
 </template>

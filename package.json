@@ -15,7 +15,8 @@
     "prism-themes": "^1.9.0",
     "vee-validate": "^4.6.7",
     "vue": "^3.2.37",
-    "windplus": "^0.0.2"
+    "windplus": "^0.0.2",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.29.3",
