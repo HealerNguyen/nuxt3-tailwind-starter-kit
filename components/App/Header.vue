@@ -61,7 +61,7 @@ const menus = ref([
         aria-label="Menu"
         @click="isOpen = !isOpen"
       >
-        <Icon name="ri:menu-line" class="w-6 h-6" />
+        <Icon />
       </button>
       <div
         :class="
