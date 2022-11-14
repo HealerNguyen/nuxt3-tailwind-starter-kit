@@ -6,6 +6,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: [
+    '@fortawesome/fontawesome-free/css/all.min.css'
+  ],
   buildModules: [],
   modules: [
     '@nuxtjs/tailwindcss',

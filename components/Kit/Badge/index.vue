@@ -1,0 +1,45 @@
+<script setup>
+</script>
+<template>
+  <div>
+    <h5 class="text-2xl font-normal leading-normal mt-0 mb-2 text-blue-800">
+      Badge
+    </h5>
+    <span
+      class="
+        text-xs
+        font-semibold
+        inline-block
+        py-1
+        px-2
+        uppercase
+        rounded
+        text-emerald-600
+        bg-emerald-200
+        uppercase
+        last:mr-0
+        mr-1
+      "
+    >
+      emerald
+    </span>
+    <span
+      class="
+        text-xs
+        font-semibold
+        inline-block
+        py-1
+        px-2
+        uppercase
+        rounded-full
+        text-emerald-600
+        bg-emerald-200
+        uppercase
+        last:mr-0
+        mr-1
+      "
+    >
+      emerald
+    </span>
+  </div>
+</template>
